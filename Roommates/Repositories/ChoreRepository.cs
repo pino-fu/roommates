@@ -23,13 +23,13 @@ namespace Roommates.Repositories
                             int idColumnPosition = reader.GetOrdinal("Id");
                             int idValue = reader.GetInt32(idColumnPosition);
                             int nameColumnPosition = reader.GetOrdinal("Name");
-                            string nameValue = reader.GetString(nameColumnPosition);                                                    
+                            string nameValue = reader.GetString(nameColumnPosition);
                             Chore chore = new Chore
                             {
                                 Id = idValue,
                                 Name = nameValue
                             };
-                            chores.Add(chore); 
+                            chores.Add(chore);
                         }
                         return chores;
                     }
@@ -54,7 +54,8 @@ namespace Roommates.Repositories
                             chore = new Chore
                             {
                                 Id = id,
-                                Name = reader.GetString(reader.GetOrdinal("Name"))                            };
+                                Name = reader.GetString(reader.GetOrdinal("Name"))
+                            };
                         }
                         return chore;
                     }
